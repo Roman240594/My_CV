@@ -1,0 +1,96 @@
+.works {
+    background-image: url(../assets/images/works__bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0 40px;
+
+    @media screen and (max-width: 1400px) {
+        padding: 40px 0 35px;
+    }
+
+    &__title {
+        margin-bottom: 200px;
+
+        @media screen and (max-width: 1400px) {
+            margin-bottom: 80px;
+        }
+
+        @include respond-to(tablet-landscape) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 28px;
+        color: $color-red;
+        text-align: end;
+
+        @include respond-to(tablet-portrait) {
+            font-size: 24px;
+        }
+
+        @include respond-to (phone) {
+            font-size: 18px;
+        }
+
+        &-link {
+        text-decoration: underline;
+        transition: ease .5s;
+
+            &:hover {
+                color: $color-dark;
+            }
+        }
+    }
+}
+
+.slider {
+    position: relative;
+
+    &__column {
+        display: flex;
+        margin: 0 -15px 200px;
+
+        @media screen and (max-width: 1400px) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__img {
+
+        &-wrapper {
+            padding: 0 30px;
+        }
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    left: 45%;
+    bottom: -30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    @include respond-to(tablet-landscape) {
+        left: 35%;
+    }
+}
+
+.slick-dots button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    font-size: 0;
+    background-color: rgba(44, 54, 71, 1);
+    margin: 0 5px;
+}
+
+.slick-dots .slick-active button{
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: rgba(44, 54, 71, .5);
+}

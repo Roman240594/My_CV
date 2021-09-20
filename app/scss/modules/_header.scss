@@ -1,0 +1,93 @@
+.header {
+    padding-top: 15px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    
+    &__logo {
+        font-family: $font-semibold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 100%;
+        color: $color-blue;
+
+        &_tag {
+            font-size: 30px;
+            line-height: 100%;
+            color: $color-orange;
+        }
+    }
+
+    &__menu {
+        text-align: center;
+    }
+}
+
+.nav {
+    font-family: $font-semibold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: $color-blue;
+    cursor: pointer;
+    transition: all .5s;
+    position: relative;
+    z-index: 3;
+    
+    &:hover {
+        color: $color-red;
+    }
+
+    &__tag {
+        font-size: 25px;
+        line-height: 100%;
+        color: $color-orange;
+        position: relative;
+        top: 3px;
+    }
+
+    &__slash {
+
+        &_active {
+            display: none;
+        }
+    }
+
+    &__list {
+        background-color: rgba(50, 50, 50, 0.4);
+        border-radius: 0 0 0 25px;
+        position: absolute;
+        top: -400px;
+        left: -14px;
+        padding-top: 80px;
+        transition: all .5s;
+
+        @include respond-to(desktop){
+            left: -40px;
+        }
+
+        @include respond-to(tablet-landscape) {
+            left: -50px;
+        }
+
+        &_active {
+           top: -40px;
+        }
+
+        &-item {
+            padding: 15px 0 15px 0;
+        }
+
+        &-link {
+            padding: 15px 30px 15px 25px;
+            color: $color-blue;
+            transition: all .2s;
+
+            &:hover {
+                color: $color-red
+            }
+        }
+    }
+}

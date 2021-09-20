@@ -1,0 +1,68 @@
+.summary {
+    background-color: $color-dark;
+    padding: 110px 0 100px;
+
+    @media screen and (max-width: 1500px) {
+        padding: 80px 0 60px;
+    }
+
+    @include respond-to (tablet-landscape) {
+        padding: 40px 0 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        align-items: center;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        &_column {
+
+            @media screen and (max-width: 1000px) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    &__text {
+        font-family: $font-bold;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 130%;
+        color: $color-light-grey;
+
+        @include respond-to (phone) {
+            font-size: 18px;
+        }
+    }
+
+    &__img {
+        width: 500px;
+
+        @include respond-to (tablet-portrait) {
+            max-width: 450px;
+        }
+
+        @include respond-to (phone) {
+            max-width: 350px;
+        }
+
+        @media screen and (max-width: 380px) {
+            max-width: 290px;
+        }
+
+        &_first {
+
+            @media screen and (max-width: 1000px) {
+                display: none;
+            }
+        }
+
+        &-wrapper {
+            padding: 10px 20px;
+        }
+    }
+}

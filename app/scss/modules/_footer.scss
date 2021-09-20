@@ -1,0 +1,13 @@
+.footer {
+    background-color: $color-dark;
+    padding: 10px 0 20px;
+
+    @include respond-to(phone) {
+        padding-top: 0;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

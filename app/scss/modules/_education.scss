@@ -1,0 +1,66 @@
+.education {
+    background-color: $color-dark;
+    padding: 60px 0 40px;
+
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__description {
+        padding: 0 15px 30px;
+
+        &-zdu {
+            transform: translate(-220%, 0);
+            transition: all 0.8s ease 0s;
+            
+
+            &._active {
+                transform: translate(0, 0);
+            }
+        }
+
+        &-beetroot {
+            transform: translate(220%, 0);
+            transition: all 0.8s ease 0s;
+
+            @media screen and (max-width: 1600px) {
+                transform: translate(200%, 0);
+            }
+            
+            @media screen and (max-width: 1040px) {
+                transform: translate(150%, 0);
+            }
+
+            @media screen and (max-width: 785px) {
+                transition: all 0.8s ease .2s;
+            }
+
+            &._active {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    &__img {
+        max-width: 300px;
+        
+
+        &-wrapper {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-family: $font-semibold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        color: $color-light-grey;
+        text-align: center;
+    }
+}
